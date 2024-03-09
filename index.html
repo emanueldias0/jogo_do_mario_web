@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Jump</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/super-mario.png" type="image/x-icon">
+    <script src="./js/script .js" defer></script>
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('./images/back.jpeg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          background-size: 100% 100%;
+
+        }
+        </style>
+    <div class="contador">
+        Pontuação: 
+        <span id="contador"></span>
+    </div>
+    <div class="game-board">
+        <img src="./images/mario.gif" class="mario">
+        <img src="./images/pipe.png" class="pipe">
+        
+        <img src="./images/clouds.png" class="clouds">
+        
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>Você perdeu! <br> Deseja reiniciar?</p>
+            <input type="button" value="Reiniciar" onClick="window.location.reload()" id="btn">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+body{
+    background-color: #191919;
+}
+.game-board {
+    width: 80%; /* Define a largura do game-board */
+    max-width: 800px; /* Define a largura máxima para evitar que o game-board fique muito largo em telas grandes */
+    height: 500px;
+    border-bottom: 15px solid rgb(3, 94, 3);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    margin: 0 auto; /* Centraliza horizontalmente o game-board */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 0.9s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    bottom: 0;
+    position: absolute;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 450px;
+    animation: clouds-animation 15s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -450px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+#btn {
+    background-color: #05880c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#btn:hover {
+    background-color: #00733d;
+}
+
+.contador {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin: 10px;
+    text-align: center; 
+    font-weight: 400, bolder;
+}
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    width: 30%;
+    height: 38%;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    text-align: center;
+}
+p, br{
+    font-size: 25px;
+    font-weight: bolder;
+    color: red;
+}
