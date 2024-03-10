@@ -36,6 +36,8 @@
 
             clearInterval(loop); // Para o loop do jogo
             clearInterval(atualizacaoDePontos); // Para a atualização da pontuação
+
+            document.getElementById('finalScore').textContent = pontos;
             
             // Mostra o botão de reiniciar
             modal.style.display = 'block';
