@@ -8,7 +8,7 @@ body{
     background-color: #191919;
 }
 .game-board {
-    width: 80%; /* Define a largura do game-board */
+    width: 70%; /* Define a largura do game-board */
     max-width: 800px; /* Define a largura máxima para evitar que o game-board fique muito largo em telas grandes */
     height: 500px;
     border-bottom: 15px solid rgb(3, 94, 3);
@@ -24,7 +24,7 @@ body{
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 0.9s infinite linear;
+    animation: pipe-animation 0.7s infinite linear;
 }
 
 .mario {
