@@ -37,6 +37,7 @@ body{
     position: absolute;
     bottom: 0;
     width: 80px;
+    height: 85px;
     animation: pipe-animation 1s infinite linear;
 }
 
