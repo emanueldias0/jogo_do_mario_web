@@ -8,21 +8,21 @@ body{
     background-color: #191919;
 }
 .game-board {
-    width: 50%; /* Define a largura do game-board */
-    max-width: 800px; /* Define a largura máxima para evitar que o game-board fique muito largo em telas grandes */
+    width: 50%;
+    max-width: 800px;
     height: 500px;
     border: 1px solid black;
     border-bottom: 15px solid rgb(3, 94, 3);
     border-radius: 10px;
-    margin: 0 auto; /* Centraliza horizontalmente o game-board */
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
 @media only screen and (max-width: 768px) {
     .game-board {
-        width: 90%; /* Reduza a largura em telas menores */
-        max-width: none; /* Remova a largura máxima para permitir o ajuste total */
+        width: 90%;
+        max-width: none;
     }
     .modal-content{
         width: 90%; 
@@ -133,18 +133,18 @@ body{
 }
 @media (max-width: 600px) {
     .modal-content {
-        width: 50%; /* Aumenta a largura em telas pequenas */
-        padding: 10px; /* Ajuste o padding conforme necessário */
+        width: 50%; 
+        padding: 10px; 
     }
 }
 .modal-content {
-    width: 80%; /* Largura relativa à viewport */
-    max-width: 500px; /* Uma largura máxima para evitar que fique muito grande em telas largas */
-    margin: auto; /* Isso ajuda a centralizar se não estiver usando Flexbox */
+    width: 80%; 
+    max-width: 500px; 
+    margin: auto;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 10px;
-    background-color: #fefefe; /* Cor de fundo */
+    background-color: #fefefe;
     text-align: center;
     margin-top: 200px;
 }
