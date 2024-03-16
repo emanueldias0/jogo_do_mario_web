@@ -154,3 +154,6 @@ p, br{
     font-weight: bolder;
     color: red;
 }
+.paused {
+    animation-play-state: paused;
+}
