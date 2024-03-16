@@ -47,6 +47,17 @@ body{
     position: absolute;
 }
 
+@media only screen and (max-width: 768px) {
+    .pipe {
+        width: 50px; /* Reduzindo o tamanho do pipe para dispositivos móveis */
+        height: 50px; /* Reduzindo o tamanho do pipe para dispositivos móveis */
+    }
+
+    .mario {
+        width: 100px; /* Reduzindo o tamanho do Mario para dispositivos móveis */
+    }
+}
+
 .jump {
     animation: jump 500ms ease-out;
 }

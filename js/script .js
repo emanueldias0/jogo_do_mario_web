@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.adoptedStyleSheets = [...document.adoptedStyleSheets, styleSheet];
 
     // Remove a animação anterior e aplica a nova animação ao pipe, mas sem iniciar a animação
-    pipe.style.animation = 'pipe-start-animation 1.5s infinite linear paused';
+    pipe.style.animation = 'pipe-start-animation 1s infinite linear paused';
 
     // Função para iniciar o jogo
     const iniciarJogo = () => {
         // Adiciona animações apenas quando o jogo começa
-        pipe.style.animation = 'pipe-animation 1.5s infinite linear';
+        pipe.style.animation = 'pipe-animation 1s infinite linear';
         document.querySelectorAll('.clouds').forEach(cloud => cloud.style.animation = 'clouds-animation 15s infinite linear');
 
         const loop = setInterval(() => {
@@ -52,29 +52,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
             if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 70) {
-                jogoAtivo = false;
+                if (pipePosition < 100 && marioPosition < 50) {jogoAtivo = false;
 
-                pipe.style.animation = 'none';
-                pipe.style.left = `${pipePosition}px`;
-
-                mario.style.animation = 'none';
-                mario.style.bottom = `${marioPosition}px`;
-
-                mario.src = './images/game-over.png';
-                mario.style.width = '75px';
-                mario.style.marginLeft = '50px';
-
-                clearInterval(loop);
-                clearInterval(atualizacaoDePontos);
-
-                document.getElementById('finalScore').textContent = pontos;
-
-                modal.style.display = 'block';
-                restartBtn.style.display = 'block';
-
-                // Adiciona a classe 'paused' para pausar as animações
-                pipe.classList.add('paused');
-                document.querySelectorAll('.clouds').forEach(cloud => cloud.classList.add('paused'));
+                    pipe.style.animation = 'none';
+                    pipe.style.left = `${pipePosition}px`;
+    
+                    mario.style.animation = 'none';
+                    mario.style.bottom = `${marioPosition}px`;
+    
+                    mario.src = './images/game-over.png';
+                    mario.style.width = '75px';
+                    mario.style.marginLeft = '50px';
+    
+                    clearInterval(loop);
+                    clearInterval(atualizacaoDePontos);
+    
+                    document.getElementById('finalScore').textContent = pontos;
+    
+                    modal.style.display = 'block';
+                    restartBtn.style.display = 'block';
+    
+                    // Adiciona a classe 'paused' para pausar as animações
+                    pipe.classList.add('paused');
+                    document.querySelectorAll('.clouds').forEach(cloud => cloud.classList.add('paused'));
+                }
             }
         }, 10);
     }
