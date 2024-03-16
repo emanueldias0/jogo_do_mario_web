@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.adoptedStyleSheets = [...document.adoptedStyleSheets, styleSheet];
 
     // Remove a animação anterior e aplica a nova animação ao pipe, mas sem iniciar a animação
-    pipe.style.animation = 'pipe-start-animation 2s infinite linear paused';
+    pipe.style.animation = 'pipe-start-animation 1.5s infinite linear paused';
 
     // Função para iniciar o jogo
     const iniciarJogo = () => {
