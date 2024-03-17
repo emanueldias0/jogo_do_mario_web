@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.adoptedStyleSheets = [...document.adoptedStyleSheets, styleSheet];
 
     // Remove a animação anterior e aplica a nova animação ao pipe, mas sem iniciar a animação
-    pipe.style.animation = 'pipe-start-animation 1.8s infinite linear paused';
+    pipe.style.animation = 'pipe-start-animation 1.2s infinite linear paused';
 
     // Função para iniciar o jogo
     const iniciarJogo = () => {
         // Adiciona animações apenas quando o jogo começa
-        pipe.style.animation = 'pipe-animation 1s infinite linear';
+        pipe.style.animation = 'pipe-animation 1.2s infinite linear';
         document.querySelectorAll('.clouds').forEach(cloud => cloud.style.animation = 'clouds-animation 15s infinite linear');
 
         const loop = setInterval(() => {
