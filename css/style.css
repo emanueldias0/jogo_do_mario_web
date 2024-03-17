@@ -165,16 +165,10 @@ p, br{
     font-weight: bolder;
     color: red;
 }
-@keyframes brilho {
-    0% { text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff; }
-    50% { text-shadow: 0 0 20px #494545, 0 0 30px #2c2b2b, 0 0 40px #2c2c2c, 0 0 50px #ffffff, 0 0 60px #ffffff; }
-    100% { text-shadow: 0 0 10px #292828, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #ffffff, 0 0 50px #ffffff; }
-}
 h1{
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 25px;
-    animation: brilho 2s infinite alternate;
 } 
 .paused {
     animation-play-state: paused;
